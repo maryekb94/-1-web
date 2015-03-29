@@ -1,0 +1,10 @@
+﻿<html>
+<head>
+<title>Aboutme</title>
+</head>
+<body>
+<div>
+<a href="../index.html"> переход по относительной ссылке </a>
+	</div>
+</body>
+</html>
