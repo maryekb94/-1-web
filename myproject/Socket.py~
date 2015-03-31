@@ -4,7 +4,7 @@ import os.path
 buffer_size = 2048
 
 server_address = ('localhost',8000)
-http_ok = """HTTP/1.1 200 OK\nContent-Type: text/html\n\n\n"""
+http_ok = """\HTTP/1.1 200 OK\nContent-Type: text/html\n\n\n"""
 print ('Serving HTTP on port %s ...' )
 
 if __name__ == "__main__":
@@ -18,9 +18,9 @@ if __name__ == "__main__":
 		filePath = ''
 		
 		result = request.split('\n')[0].split(' ')[1]
-		filePath = '/' + result
+		filePath = './' + result
 		if not os.path.isfile(filePath):
-			filePath ='myproject/index.html' 
+			filePath ='./index.html' 
 		
 		
 		fd = open(filePath,'r')
