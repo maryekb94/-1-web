@@ -5,7 +5,7 @@ buffer_size = 2048
 PORT = 8000
 
 server_address = ('localhost',8000)
-http_ok = """\HTTP/1.1 200 OK\nContent-Type: text/html\n\n\n"""
+http_ok = """HTTP/1.1 200 OK\nContent-Type: text/html\n\n\n"""
 print ('Serving HTTP on port %s ...' % PORT )
 
 if __name__ == "__main__":
