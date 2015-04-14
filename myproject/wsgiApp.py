@@ -12,16 +12,14 @@ class MiddleWareApp(object):
         self.app = app
 
     def __call__(self, environ, start_response):
-        response = self.app(environ, start_response)[0]
-        
+		response = self.app(environ, start_response)[0] 
 		if response.find('<body>') >-1:
-            head,body = response.split('<body>')
-            bodyend,htmlend = body.split('</body>')
-            bodyend = '<body>'+ top + bodyend + bottom + '</body>'
-            yield head + bodyend + htmlend
-        
+			head,body = response.split('<body>')
+			bodyend,htmlend = body.split('</body>')
+			bodyend = '<body>'+ top + bodyend + bottom + '</body>'
+			yield head + bodyend + htmlend
 		else:
-            yield top + response + bottom
+			yield top + response + bottom
     
 
 import os
